@@ -1,4 +1,4 @@
-package com.nori.muslimmediaapp.fragment
+package com.nori.itfetch.fragment
 
 import android.os.Bundle
 import android.util.Log
@@ -8,38 +8,39 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.nori.muslimmediaapp.NewsViewModel
-import com.nori.muslimmediaapp.adapter.NewsAdapter
-import com.nori.muslimmediaapp.databinding.FragmentAboutAlQuranBinding
+import com.nori.itfetch.NewsViewModel
+import com.nori.itfetch.adapter.NewsAdapter
+import com.nori.itfetch.databinding.FragmentCommonBinding
 
-class AboutAlQuranFragment : Fragment() {
-    private var _binding: FragmentAboutAlQuranBinding? = null
-    private val binding get() = _binding as FragmentAboutAlQuranBinding
+class CommonFragment : Fragment() {
+    private var _binding: FragmentCommonBinding? = null
+    private val binding get() = _binding as FragmentCommonBinding
 
-    private var _quranNewsViewModel: NewsViewModel? = null
-    private val quranNewsViewModel get() = _quranNewsViewModel as NewsViewModel
+    private var _commonNewsViewModel: NewsViewModel? = null
+    private val commonNewsViewModel get() = _commonNewsViewModel as NewsViewModel
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        _binding = FragmentAboutAlQuranBinding.inflate(layoutInflater)
+        _binding = FragmentCommonBinding.inflate(layoutInflater)
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.loadingView.root.visibility = View.VISIBLE
-        _quranNewsViewModel = ViewModelProvider(this)[NewsViewModel::class.java]
-        quranNewsViewModel.aboutAlQuranNews()
-        quranNewsViewModel.aboutAlQuranNews.observe(viewLifecycleOwner) {
+        _commonNewsViewModel = ViewModelProvider(this)[NewsViewModel::class.java]
+        commonNewsViewModel.commonMuslimNews()
+        commonNewsViewModel.commonMuslimNews.observe(viewLifecycleOwner) {
             val mAdapter = NewsAdapter()
             mAdapter.setData(it.articles)
             Log.i(
-                "AboutAlQuranFragment",
+                "CommonFragment",
                 "onViewCreated: ${it.articles}"
             )
-            binding.rvAlquran.apply {
+            binding.rvCommon.apply {
                 adapter = mAdapter
                 layoutManager = LinearLayoutManager(view.context)
             }

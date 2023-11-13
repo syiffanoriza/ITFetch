@@ -1,4 +1,4 @@
-package com.nori.muslimmediaapp.ui
+package com.nori.itfetch.ui
 
 import android.app.SearchManager
 import android.content.Context
@@ -8,10 +8,10 @@ import android.os.Bundle
 import android.view.View
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.nori.muslimmediaapp.NewsViewModel
-import com.nori.muslimmediaapp.R
-import com.nori.muslimmediaapp.adapter.NewsAdapter
-import com.nori.muslimmediaapp.databinding.ActivitySearchableBinding
+import com.nori.itfetch.NewsViewModel
+import com.nori.itfetch.R
+import com.nori.itfetch.adapter.NewsAdapter
+import com.nori.itfetch.databinding.ActivitySearchableBinding
 
 class SearchableActivity : AppCompatActivity() {
     // TODO 6 - CREATE SEARCHABLE ACTIVITY

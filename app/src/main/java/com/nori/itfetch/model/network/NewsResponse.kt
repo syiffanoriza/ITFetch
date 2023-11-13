@@ -1,4 +1,4 @@
-package com.nori.muslimmediaapp.model.network
+package com.nori.itfetch.model.network
 
 import android.os.Parcelable
 import com.squareup.moshi.Json

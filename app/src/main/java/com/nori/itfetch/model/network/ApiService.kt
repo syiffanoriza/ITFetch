@@ -1,4 +1,4 @@
-package com.nori.muslimmediaapp.model.network
+package com.nori.itfetch.model.network
 
 import retrofit2.Call
 import retrofit2.http.GET

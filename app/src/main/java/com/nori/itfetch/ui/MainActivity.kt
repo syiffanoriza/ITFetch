@@ -1,4 +1,4 @@
-package com.nori.muslimmediaapp.ui
+package com.nori.itfetch.ui
 
 import android.app.SearchManager
 import android.content.Context
@@ -8,9 +8,9 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.SearchView
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import com.google.android.material.tabs.TabLayoutMediator
-import com.nori.muslimmediaapp.R
-import com.nori.muslimmediaapp.adapter.SectionPagerAdapter
-import com.nori.muslimmediaapp.databinding.ActivityMainBinding
+import com.nori.itfetch.R
+import com.nori.itfetch.adapter.SectionPagerAdapter
+import com.nori.itfetch.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
     private var _binding: ActivityMainBinding? = null
@@ -28,10 +28,10 @@ class MainActivity : AppCompatActivity() {
         binding.vpNews.adapter = SectionPagerAdapter(this)
 
         val tabList = arrayOf(
-            "Common",
-            "About Al Quran",
-            "Al Jazeera",
-            "Warn for Muslim"
+            "Technology",
+            "AI/ML",
+            "IoT Tech",
+            "Blockchain"
         )
         TabLayoutMediator(binding.tabs, binding.vpNews) {
             tab, position -> tab.text = tabList[position]

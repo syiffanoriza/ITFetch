@@ -1,4 +1,4 @@
-package com.nori.muslimmediaapp
+package com.nori.itfetch
 
 import org.junit.Test
 

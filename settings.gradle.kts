@@ -13,6 +13,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Muslim Media App"
+rootProject.name = "IT Fetch"
 include(":app")
  

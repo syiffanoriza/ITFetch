@@ -1,4 +1,4 @@
-package com.nori.muslimmediaapp.ui
+package com.nori.itfetch.ui
 
 import android.graphics.Bitmap
 import android.os.Build.VERSION.SDK_INT
@@ -8,9 +8,9 @@ import android.view.View
 import android.webkit.WebResourceRequest
 import android.webkit.WebView
 import android.webkit.WebViewClient
-import com.nori.muslimmediaapp.R
-import com.nori.muslimmediaapp.databinding.ActivityDetailBinding
-import com.nori.muslimmediaapp.model.network.ArticlesItem
+import com.nori.itfetch.R
+import com.nori.itfetch.databinding.ActivityDetailBinding
+import com.nori.itfetch.model.network.ArticlesItem
 import com.squareup.picasso.Picasso
 
 class DetailActivity : AppCompatActivity() {

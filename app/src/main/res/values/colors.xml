@@ -5,5 +5,5 @@
     <!--  TODO 4 - ADD LOGOTEXT.XML & COLORS  -->
     <color name="gray_bg">#D4D4D4</color>
     <color name="gray_text">#666666</color>
-    <color name="green">#189605</color>
+    <color name="colorPrimary">#74A3FF</color>
 </resources>

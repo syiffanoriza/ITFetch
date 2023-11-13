@@ -1,25 +1,22 @@
-package com.nori.muslimmediaapp.adapter
+package com.nori.itfetch.adapter
 
 import android.content.Intent
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.nori.muslimmediaapp.R
-import com.nori.muslimmediaapp.databinding.NewsItemOneBinding
-import com.nori.muslimmediaapp.model.network.ArticlesItem
-import com.nori.muslimmediaapp.ui.DetailActivity
+import com.nori.itfetch.R
+import com.nori.itfetch.databinding.NewsItemOneBinding
+import com.nori.itfetch.model.network.ArticlesItem
+import com.nori.itfetch.ui.DetailActivity
 import com.squareup.picasso.Picasso
 import java.text.SimpleDateFormat
 import java.util.Calendar
 import java.util.Locale
-
-// TODO 18 - CREATE NEWS ADAPTER
 class NewsAdapter : RecyclerView.Adapter<NewsAdapter.NewsViewHolder>() {
     private val listNews = ArrayList<ArticlesItem>()
     class NewsViewHolder(var binding: NewsItemOneBinding) : RecyclerView.ViewHolder(binding.root)
 
-    // TODO 31 - EDIT NEWS ADAPTER
     fun setData(list: List<ArticlesItem>?) {
         if (list == null) return
         listNews.clear()

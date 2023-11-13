@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Muslim Media App</string>
+    <string name="app_name">ITFetch</string>
     <!--  TODO 9 - ADD STRINGS  -->
     <string name="content_news">News</string>
     <string name="content_image_news">Image News</string>

@@ -1,11 +1,11 @@
-package com.nori.muslimmediaapp
+package com.nori.itfetch
 
 import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.nori.muslimmediaapp.model.network.ApiClient
-import com.nori.muslimmediaapp.model.network.NewsResponse
+import com.nori.itfetch.model.network.ApiClient
+import com.nori.itfetch.model.network.NewsResponse
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response

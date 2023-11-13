@@ -1,4 +1,4 @@
-package com.nori.muslimmediaapp.model.network
+package com.nori.itfetch.model.network
 
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit

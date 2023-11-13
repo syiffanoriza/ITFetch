@@ -1,12 +1,12 @@
-package com.nori.muslimmediaapp.adapter
+package com.nori.itfetch.adapter
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.viewpager2.adapter.FragmentStateAdapter
-import com.nori.muslimmediaapp.fragment.AboutAlQuranFragment
-import com.nori.muslimmediaapp.fragment.AlJazeeraFragment
-import com.nori.muslimmediaapp.fragment.CommonFragment
-import com.nori.muslimmediaapp.fragment.WarningFragment
+import com.nori.itfetch.fragment.AboutAlQuranFragment
+import com.nori.itfetch.fragment.AlJazeeraFragment
+import com.nori.itfetch.fragment.CommonFragment
+import com.nori.itfetch.fragment.WarningFragment
 
 class SectionPagerAdapter(fa: FragmentActivity): FragmentStateAdapter(fa) {
     override fun getItemCount(): Int = 4
