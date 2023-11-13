@@ -1,0 +1,27 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!--  TODO 3 - INITIALIZE THEME  -->
+    <!-- Base application theme. -->
+    <style name="Base.Theme.MuslimMediaApp" parent="Theme.Material3.DayNight">
+        <!-- Customize your light theme here. -->
+        <item name="android:statusBarColor">@color/white</item>
+        <item name="android:colorControlNormal">@color/black</item>
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+
+        <!-- Turn action bar to light -->
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+
+    <style name="Theme.MuslimMediaApp" parent="Base.Theme.MuslimMediaApp">
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+    </style>
+    <style name="ThemeOverlay.SearchView" parent="">
+        <item name="android:editTextColor">@color/black</item>
+        <item name="android:textColorHint">@color/gray_text</item>
+        <!-- Add items from ThemeOverlay.Material3.Search  -->
+        <item name="actionMenuTextColor">?attr/colorOnSurfaceVariant</item>
+        <item name="colorControlNormal">?attr/colorOnSurfaceVariant</item>
+        <item name="actionOverflowButtonStyle">@style/Widget.Material3.Search.ActionButton.Overflow</item>
+        <item name="toolbarNavigationButtonStyle">@style/Widget.Material3.Search.Toolbar.Button.Navigation</item>
+    </style>
+</resources>
