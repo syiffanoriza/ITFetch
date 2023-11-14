@@ -11,23 +11,23 @@ import retrofit2.Callback
 import retrofit2.Response
 
 class NewsViewModel: ViewModel() {
-    private var _commonMuslimNews = MutableLiveData<NewsResponse>()
-    val commonMuslimNews get() = _commonMuslimNews as LiveData<NewsResponse>
+    private var _technologyNews = MutableLiveData<NewsResponse>()
+    val technologyNews get() = _technologyNews as LiveData<NewsResponse>
 
-    private var _aboutAlQuranNews = MutableLiveData<NewsResponse>()
-    val aboutAlQuranNews get() = _aboutAlQuranNews as LiveData<NewsResponse>
+    private var _AiNews = MutableLiveData<NewsResponse>()
+    val AiNews get() = _AiNews as LiveData<NewsResponse>
 
-    private var _alJazeeraNews = MutableLiveData<NewsResponse>()
-    val alJazeeraNews get() = _alJazeeraNews as LiveData<NewsResponse>
+    private var _IotNews = MutableLiveData<NewsResponse>()
+    val IotNews get() = _IotNews as LiveData<NewsResponse>
 
-    private var _warningForMuslimNews = MutableLiveData<NewsResponse>()
-    val warningForMuslimNews get() = _warningForMuslimNews as LiveData<NewsResponse>
+    private var _BlockchainNews = MutableLiveData<NewsResponse>()
+    val BlockchainNews get() = _BlockchainNews as LiveData<NewsResponse>
 
     private var _searchNews = MutableLiveData<NewsResponse>()
     val searchNews get() = _searchNews as LiveData<NewsResponse>
 
-    fun commonMuslimNews() {
-        ApiClient.provideApiService().getCommonMuslimNews()
+    fun technologyNews() {
+        ApiClient.provideApiService().getTechnologyNews()
             .enqueue(object : Callback<NewsResponse> {
                 override fun onResponse(
                     call: Call<NewsResponse>,
@@ -38,7 +38,7 @@ class NewsViewModel: ViewModel() {
                             "ViewModel",
                             "onResponse: Call success with HTTP status code ${response.body()}"
                         )
-                        _commonMuslimNews.postValue(response.body())
+                        _technologyNews.postValue(response.body())
                     } else Log.e(
                         "ViewModel",
                         "onResponse: Call error with HTTP status code " + response.code()
@@ -54,8 +54,8 @@ class NewsViewModel: ViewModel() {
             })
     }
 
-    fun aboutAlQuranNews() {
-        ApiClient.provideApiService().getAboutAlQuranNews()
+    fun aiNews() {
+        ApiClient.provideApiService().getAiNews()
             .enqueue(object : Callback<NewsResponse> {
                 override fun onResponse(
                     call: Call<NewsResponse>,
@@ -66,7 +66,7 @@ class NewsViewModel: ViewModel() {
                             "ViewModel",
                             "onResponse: Call success with HTTP status code ${response.body()}"
                         )
-                        _aboutAlQuranNews.postValue(response.body())
+                        _AiNews.postValue(response.body())
                     } else Log.e(
                         "ViewModel",
                         "onResponse: Call error with HTTP status code " + response.code()
@@ -82,8 +82,8 @@ class NewsViewModel: ViewModel() {
             })
     }
 
-    fun alJazeeraNews() {
-        ApiClient.provideApiService().getAlJazeeraNews()
+    fun iotNews() {
+        ApiClient.provideApiService().getIotNews()
             .enqueue(object : Callback<NewsResponse>{
                 override fun onResponse(
                     call: Call<NewsResponse>,
@@ -94,7 +94,7 @@ class NewsViewModel: ViewModel() {
                             "ViewModel",
                             "${response.body()}"
                         )
-                        _alJazeeraNews.postValue(response.body())
+                        _IotNews.postValue(response.body())
                     } else Log.e(
                         "ViewModel",
                         "onResponse: Call error with HTTP status code"
@@ -110,8 +110,8 @@ class NewsViewModel: ViewModel() {
             })
     }
 
-    fun warningForMuslimNews() {
-        ApiClient.provideApiService().getWarningForMuslimNews()
+    fun blockchainNews() {
+        ApiClient.provideApiService().getBlockchainNews()
             .enqueue(object : Callback<NewsResponse> {
                 override fun onResponse(
                     call: Call<NewsResponse>,
@@ -122,7 +122,7 @@ class NewsViewModel: ViewModel() {
                             "ViewModel",
                             "onResponse: ${response.body()}"
                         )
-                        _warningForMuslimNews.postValue(response.body())
+                        _BlockchainNews.postValue(response.body())
                     } else Log.e(
                         "ViewModel",
                         "onResponse: Call error with HTTP status code " + response.code()

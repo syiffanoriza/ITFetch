@@ -12,7 +12,7 @@ import com.nori.itfetch.R
 import com.nori.itfetch.adapter.SectionPagerAdapter
 import com.nori.itfetch.databinding.ActivityMainBinding
 
-class MainActivity : AppCompatActivity() {
+class   MainActivity : AppCompatActivity() {
     private var _binding: ActivityMainBinding? = null
     private val binding get() = _binding as ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {

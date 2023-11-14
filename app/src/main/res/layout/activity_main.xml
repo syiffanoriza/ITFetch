@@ -34,6 +34,7 @@
             android:elevation="0dp"
             android:backgroundTint="@color/white"
             app:tabIndicatorColor="@color/colorPrimary"
+            app:tabRippleColor="@color/colorPrimary"
             app:tabSelectedTextColor="@color/black"/>
 
     </com.google.android.material.appbar.AppBarLayout>

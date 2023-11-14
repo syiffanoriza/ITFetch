@@ -10,37 +10,37 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.nori.itfetch.NewsViewModel
 import com.nori.itfetch.adapter.NewsAdapter
-import com.nori.itfetch.databinding.FragmentWarningBinding
+import com.nori.itfetch.databinding.FragmentTechnologyBinding
 
-class WarningFragment : Fragment() {
-    private var _binding: FragmentWarningBinding? = null
-    private val binding get() = _binding as FragmentWarningBinding
+class TechnologyFragment : Fragment() {
+    private var _binding: FragmentTechnologyBinding? = null
+    private val binding get() = _binding as FragmentTechnologyBinding
 
-    private var _warningNewsViewModel: NewsViewModel? = null
-    private val warningNewsViewModel get() = _warningNewsViewModel as NewsViewModel
+    private var _technologyNewsViewModel: NewsViewModel? = null
+    private val technologyNewsViewModel get() = _technologyNewsViewModel as NewsViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        _binding = FragmentWarningBinding.inflate(layoutInflater)
+        _binding = FragmentTechnologyBinding.inflate(layoutInflater)
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.loadingView.root.visibility = View.VISIBLE
-        _warningNewsViewModel = ViewModelProvider(this)[NewsViewModel::class.java]
-        warningNewsViewModel.warningForMuslimNews()
-        warningNewsViewModel.warningForMuslimNews.observe(viewLifecycleOwner) {
+        _technologyNewsViewModel = ViewModelProvider(this)[NewsViewModel::class.java]
+        technologyNewsViewModel.technologyNews()
+        technologyNewsViewModel.technologyNews.observe(viewLifecycleOwner) {
             val mAdapter = NewsAdapter()
             mAdapter.setData(it.articles)
             Log.i(
-                "WarningFragment",
+                "TechnologyFragment",
                 "onViewCreated: ${it.articles}"
             )
-            binding.rvWarning.apply {
+            binding.rvTechnology.apply {
                 adapter = mAdapter
                 layoutManager = LinearLayoutManager(view.context)
             }

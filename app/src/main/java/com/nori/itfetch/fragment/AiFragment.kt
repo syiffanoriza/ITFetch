@@ -10,37 +10,36 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.nori.itfetch.NewsViewModel
 import com.nori.itfetch.adapter.NewsAdapter
-import com.nori.itfetch.databinding.FragmentCommonBinding
+import com.nori.itfetch.databinding.FragmentAiBinding
 
-class CommonFragment : Fragment() {
-    private var _binding: FragmentCommonBinding? = null
-    private val binding get() = _binding as FragmentCommonBinding
+class AiFragment : Fragment() {
+    private var _binding: FragmentAiBinding? = null
+    private val binding get() = _binding as FragmentAiBinding
 
-    private var _commonNewsViewModel: NewsViewModel? = null
-    private val commonNewsViewModel get() = _commonNewsViewModel as NewsViewModel
-
+    private var _aiNewsViewModel: NewsViewModel? = null
+    private val aiNewsViewModel get() = _aiNewsViewModel as NewsViewModel
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        _binding = FragmentCommonBinding.inflate(layoutInflater)
+        _binding = FragmentAiBinding.inflate(layoutInflater)
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.loadingView.root.visibility = View.VISIBLE
-        _commonNewsViewModel = ViewModelProvider(this)[NewsViewModel::class.java]
-        commonNewsViewModel.commonMuslimNews()
-        commonNewsViewModel.commonMuslimNews.observe(viewLifecycleOwner) {
+        _aiNewsViewModel = ViewModelProvider(this)[NewsViewModel::class.java]
+        aiNewsViewModel.aiNews()
+        aiNewsViewModel.AiNews.observe(viewLifecycleOwner) {
             val mAdapter = NewsAdapter()
             mAdapter.setData(it.articles)
             Log.i(
-                "CommonFragment",
+                "AiFragment",
                 "onViewCreated: ${it.articles}"
             )
-            binding.rvCommon.apply {
+            binding.rvAi.apply {
                 adapter = mAdapter
                 layoutManager = LinearLayoutManager(view.context)
             }

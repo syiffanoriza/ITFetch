@@ -10,36 +10,37 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.nori.itfetch.NewsViewModel
 import com.nori.itfetch.adapter.NewsAdapter
-import com.nori.itfetch.databinding.FragmentAboutAlQuranBinding
+import com.nori.itfetch.databinding.FragmentBlockchainBinding
 
-class AboutAlQuranFragment : Fragment() {
-    private var _binding: FragmentAboutAlQuranBinding? = null
-    private val binding get() = _binding as FragmentAboutAlQuranBinding
+class BlockchainFragment : Fragment() {
+    private var _binding: FragmentBlockchainBinding? = null
+    private val binding get() = _binding as FragmentBlockchainBinding
 
-    private var _quranNewsViewModel: NewsViewModel? = null
-    private val quranNewsViewModel get() = _quranNewsViewModel as NewsViewModel
+    private var _blockchainNewsViewModel: NewsViewModel? = null
+    private val blockchainNewsViewModel get() = _blockchainNewsViewModel as NewsViewModel
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        _binding = FragmentAboutAlQuranBinding.inflate(layoutInflater)
+        _binding = FragmentBlockchainBinding.inflate(layoutInflater)
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.loadingView.root.visibility = View.VISIBLE
-        _quranNewsViewModel = ViewModelProvider(this)[NewsViewModel::class.java]
-        quranNewsViewModel.aboutAlQuranNews()
-        quranNewsViewModel.aboutAlQuranNews.observe(viewLifecycleOwner) {
+        _blockchainNewsViewModel = ViewModelProvider(this)[NewsViewModel::class.java]
+        blockchainNewsViewModel.blockchainNews()
+        blockchainNewsViewModel.BlockchainNews.observe(viewLifecycleOwner) {
             val mAdapter = NewsAdapter()
             mAdapter.setData(it.articles)
             Log.i(
-                "AboutAlQuranFragment",
+                "BlockchainFragment",
                 "onViewCreated: ${it.articles}"
             )
-            binding.rvAlquran.apply {
+            binding.rvBlockchain.apply {
                 adapter = mAdapter
                 layoutManager = LinearLayoutManager(view.context)
             }

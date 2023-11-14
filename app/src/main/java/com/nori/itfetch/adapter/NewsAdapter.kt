@@ -70,9 +70,6 @@ class NewsAdapter : RecyclerView.Adapter<NewsAdapter.NewsViewHolder>() {
                 .onlyScaleDown()
                 .placeholder(R.drawable.ic_logo)
                 .into(ivNews)
-//            Picasso.get().load(news.urlToImage)
-//                .placeholder(R.drawable.ic_logo)
-//                .into(ivNews)
         }
 
         holder.itemView.setOnClickListener {
