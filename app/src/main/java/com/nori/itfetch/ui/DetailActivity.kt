@@ -14,9 +14,6 @@ import com.nori.itfetch.model.network.ArticlesItem
 import com.squareup.picasso.Picasso
 
 class DetailActivity : AppCompatActivity() {
-    // TODO 7 - CREATE DETAIL ACTIVITY, MODIFY XML
-    // TODO 30 - EDIT DETAIL ACTIVITY
-
     private var _binding: ActivityDetailBinding? = null //to check if the _binding is non null, to avoid NPE error
     private val binding get() = _binding as ActivityDetailBinding
     override fun onCreate(savedInstanceState: Bundle?) {

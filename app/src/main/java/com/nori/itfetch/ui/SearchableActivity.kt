@@ -14,7 +14,6 @@ import com.nori.itfetch.adapter.NewsAdapter
 import com.nori.itfetch.databinding.ActivitySearchableBinding
 
 class SearchableActivity : AppCompatActivity() {
-    // TODO 6 - CREATE SEARCHABLE ACTIVITY
     private var _binding: ActivitySearchableBinding? = null
     private val binding get() = _binding as ActivitySearchableBinding
 
